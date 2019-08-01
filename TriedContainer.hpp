@@ -41,9 +41,18 @@ template<class Hashable = char, class DataType = int>
 class TriedContainer
 {
 public:
-	TriedContainer()
+	TriedContainer() : 
+		root(new TrieNode<Hashable,DataType>()), _size(0)
+	{}
+
+	~TriedContainer()
 	{
-		root = new TrieNode<Hashable,DataType>();
+		// TODO
+	}
+
+	TriedContainer(const TriedContainer& rhs)
+	{
+		// TODO
 	}
 
 	/*
